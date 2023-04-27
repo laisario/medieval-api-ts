@@ -1,6 +1,6 @@
 interface User {
-  id: number;
-  userName: string;
+  id?: number;
+  username: string;
   vocation: string;
   level: number;
   password: string;
