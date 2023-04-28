@@ -28,7 +28,6 @@ export default class ProductModel {
     AS productsIds FROM Trybesmith.products GROUP BY order_id`;
     const [result] = await this.connection
       .execute<RowDataPacket[] >(query);
-    console.log(result);
 
     return result as ProductsId[];
   }

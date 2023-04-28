@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import OrderService from '../services/orders';
 import ProductService from '../services/products';
+import { OrderWithProducts } from '../interfaces/orders';
 
 class OrderController {
   orderService: OrderService;
@@ -17,16 +18,17 @@ class OrderController {
   async getAllWithProducts(_req: Request, res: Response): Promise<void> {
     const orders = await this.orderService.getAll();
     const products = await this.productService.getProductsId();
-
-    const test = orders.map(async (order) => {
-      const productsWithId = products.map((product) => { 
+    const productsWithId: OrderWithProducts[] = [];
+    orders.forEach(async (order) => {
+      products.forEach((product) => { 
         if (product.id === order.id) {
-          return { ...order, productsIds: product.productsIds };
-        } return 'hji';
+          productsWithId.push({ ...order, productsIds: product.productsIds });
+        } return null;
       });
-      return productsWithId;
+      console.log('aaaaa', productsWithId);
+      return productsWithId.sort((a, b) => a.id - b.id);
     });
-    res.status(200).json(test);
+    res.status(200).json(productsWithId);
   }
 }
 

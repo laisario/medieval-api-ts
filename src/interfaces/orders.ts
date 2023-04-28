@@ -1,9 +1,15 @@
 export interface Order {
-  id?: number;
+  id: number;
   userId: number;
 }
 export interface OrderWithProducts {
-  id?: number;
+  id: number;
+  productsIds: Array<number>;
+  userId: number;
+}
+
+export interface OrderWithProductsAndId {
+  id: number;
   productsIds: Array<number>;
   userId: number;
 }

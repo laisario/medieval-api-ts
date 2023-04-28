@@ -10,8 +10,8 @@ class OrderService {
   }
 
   async getAll(): Promise<Order[]> {
-    const product = await this.model.getAll();
-    return product;
+    const products = await this.model.getAll();
+    return products;
   }
 }
 

@@ -12,6 +12,8 @@ export default class OrderModel {
     const query = 'SELECT * FROM Trybesmith.orders';
     const [result] = await this.connection
       .execute<RowDataPacket[]>(query);
-    return result as Order[];
+    const productsFormated = result
+      .map((product) => ({ id: product.id, userId: product.user_id }));
+    return productsFormated as Order[];
   }
 }
