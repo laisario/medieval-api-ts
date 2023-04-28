@@ -1,8 +1,11 @@
-interface Product {
+export interface Product {
   id?: number;
   name: string;
   amount: string;
   orderId?: number;
 }
 
-export default Product;
+export interface ProductsId {
+  id: number;
+  productsIds: Array<number>;
+}

@@ -1,6 +1,6 @@
 import connection from '../models/connection';
 import ProductModel from '../models/product';
-import Product from '../interfaces/products';
+import { Product, ProductsId } from '../interfaces/products';
 
 class ProductService {
   model: ProductModel;
@@ -17,6 +17,11 @@ class ProductService {
   async getAll(): Promise<Product[]> {
     const product = await this.model.getAll();
     return product;
+  }
+
+  async getProductsId(): Promise<ProductsId[]> {
+    const productsIds = await this.model.getProductsId();
+    return productsIds;
   }
 }
 
