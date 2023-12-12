@@ -1,10 +1,11 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# MedievalMarket API
+O "MedievalMarket" é uma API de CRUD de itens medievais, desenvolvida com TypeScript. Esta API possibilita a gestão de produtos inspirados no contexto medieval.
+
+## Funcionalidades
+- Cadastro de Itens: Permite a adição de novos itens ao catálogo.
+- Listagem de Itens: Apresenta a lista de itens disponíveis.
+- Atualização de Itens: Permite a modificação de informações de itens existentes.
+- Remoção de Itens: Permite a exclusão de itens do catálogo.
+## Tecnologias Utilizadas
+- TypeScript: Linguagem de programação usada para o desenvolvimento da API.
+- Express: Framework para construção de aplicativos web com Node.js.
